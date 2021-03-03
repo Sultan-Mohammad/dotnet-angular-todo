@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Due date</th>
+            <th scope="col">Completed?</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <th scope="row">{{task.id}}</th>
+            <td>{{task.title}}</td>
+            <td>{{task.dueDate | date}}</td>
+            <td>
+                {{task.isCompleted | boolToText}}
+            </td>
+            <td>
+                <button class="button button-small btn-success" title="mark as done">✓</button>
+                &nbsp;
+                <button class="button button-small btn-danger" title="remove task">x</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
