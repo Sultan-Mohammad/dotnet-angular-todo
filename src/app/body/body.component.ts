@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../interfaces/task';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-body',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private taskService : TaskService) { }
 
   ngOnInit(): void {
   }

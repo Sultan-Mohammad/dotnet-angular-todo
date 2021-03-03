@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TasksComponent } from './tasks/tasks.component';
 import { BoolToTextPipe } from './bool-to-text.pipe';
 import { BodyComponent } from './body/body.component';
+import { TaskDetailsComponent } from './task-details/task-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { BodyComponent } from './body/body.component';
     HeaderComponent,
     TasksComponent,
     BoolToTextPipe,
-    BodyComponent
+    BodyComponent,
+    TaskDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

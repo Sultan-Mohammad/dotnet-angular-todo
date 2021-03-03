@@ -17,9 +17,12 @@
                 {{task.isCompleted | boolToText}}
             </td>
             <td>
-                <button class="button button-small btn-success" title="mark as done">✓</button>
+                <button class="button button-small btn-success" title="mark as done" (click)="markAsDone(task.id)" >✓</button>
                 &nbsp;
-                <button class="button button-small btn-danger" title="remove task">x</button>
+                <button class="button button-small btn-danger" title="remove task" (click)="removeTask(task.id)">x</button>
+                <a routerLink="/taskdetail/{{task.id}}">
+                    details
+                </a>
             </td>
         </tr>
     </tbody>
